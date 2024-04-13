@@ -1,0 +1,18 @@
+
+def period(df['SA']):
+    a , b = [] , []
+    a.append(dfv.mean())
+    b.append(0)
+    for i in range(1 , len(dfv)//2 + 1):
+        p = 0
+        q = 0
+       for j in range(1, len(dfv)+1):
+p = p + dfv[j - 1] * math.cos(2 * math.pi * i * j / len(dfv))
+q = q + dfv[j - 1] * math.sin(2 * math.pi * i * j / len(dfv))
+       a.append(2 / len(dfv) * p)
+       b.append(2 / len(dfv) * q)0
+    gramma = []
+    for i in range(len(a)):
+k = (a[i] ** 2 + b[i] ** 2) * len(dfv) / 2
+gramma.append( k )
+    return a, b, gramma
